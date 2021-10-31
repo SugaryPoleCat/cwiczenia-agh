@@ -7,12 +7,14 @@ namespace Zadanie_2
     {
         static void Main(string[] args)
         {
-            int ile = 0;
-            bool toLiczba = false;
+            int ile = 0;    // Ile liczb uzywtkonik chce
+            bool toLiczba = false;  // to zmieni sie jezeli uzytkownik wpisze liczbe. Inicjalnie: false.
             Console.WriteLine("Podaj ile liczb chcesz: ");
-            while (!toLiczba)
+            while (!toLiczba)   // w tym przypadku lepszy by byl do{}while();
             {
-                toLiczba = int.TryParse(Console.ReadLine(), out ile);
+                toLiczba = int.TryParse(Console.ReadLine(), out ile);   // proboj wkleic INPUT z CONSOLE jako int.
+                // Jezeli sie uda, ustaw ILE, czyli to out.
+                // jezeli nie udalo sie, to "t
                 if (!toLiczba)
                 {
                     Console.WriteLine("Podaj liczbe ponownie");
@@ -42,7 +44,6 @@ namespace Zadanie_2
             Console.WriteLine("Na pozycji: " + (arrLiczb.ToList().IndexOf(arrLiczb.Max()) + 1));
 
             Console.WriteLine("Srednia: " + Liczby.Srednia(arrLiczb));
-            Liczby chuj = new Liczby();
 
             Console.ReadLine();
         }

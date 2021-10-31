@@ -8,10 +8,19 @@ namespace Zadanie_2
 {
     class Liczby
     {
-        Liczby()
+        /// <summary>
+        /// konstruktor.Nie musi byc uzywany. Jest jako publik, zeby byl dostepny w innych klasach.
+        /// </summary>
+        public Liczby()
         {
 
         }
+        /// <summary>
+        /// To przeliczy srednia naszych liczb. Jest to metoda STATIC, wiec nie trzeba jej inicjalizowac przed uzyciem, jak 
+        /// w przypadku konstruktora. Wystarczy: Liczby.Srednia(arrayCyfr)
+        /// </summary>
+        /// <param name="numArr">Array liczb jako int</param>
+        /// <returns>resultat w decimal.</returns>
         static public decimal Srednia(int[] numArr)
         {
             decimal[] dec = new decimal[numArr.Length];
