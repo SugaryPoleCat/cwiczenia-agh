@@ -8,15 +8,19 @@ namespace Zadanie_2
 {
     class Liczby
     {
-        int[] numArr;
-        public Liczby(int[] arrNUm)
+        Liczby()
         {
-            numArr = arrNUm;
-        }        
-        public void countStuff()
+
+        }
+        static public decimal Srednia(int[] numArr)
         {
-            Console.WriteLine("Najwieksza liczba: " + numArr.Max());
-            Console.WriteLine("Suma Liczb: " + numArr.Sum());
+            decimal[] dec = new decimal[numArr.Length];
+            for(int x = 0; x < numArr.Length; x++)
+            {
+                dec[x] = Convert.ToDecimal(numArr[x]);
+            }
+            decimal result = dec.Sum();
+            return result / dec.Length;
         }
     }
 }

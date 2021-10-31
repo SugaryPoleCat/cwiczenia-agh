@@ -9,37 +9,41 @@ namespace Zadanie_2
         {
             int ile = 0;
             bool toLiczba = false;
-            Console.WriteLine("Ile liczb: ");
+            Console.WriteLine("Podaj ile liczb chcesz: ");
             while (!toLiczba)
             {
                 toLiczba = int.TryParse(Console.ReadLine(), out ile);
                 if (!toLiczba)
                 {
-                    Console.WriteLine("Podaj ile liczb w cyfrach. Liczba musi byc calkowita.");
+                    Console.WriteLine("Podaj liczbe ponownie");
                 }
-
             }
-            Console.WriteLine("Teraz podaj " + ile + " liczb ktore zssumujemy i podamy ktora jest najwieksza.");
 
-           int[] numArr = new int[ile];
-            for(int x=0; x<ile; x++)
+            int[] arrLiczb = new int[ile];
+
+            for (int x = 0; x < arrLiczb.Length; x++)
             {
+                toLiczba = false;
                 int liczba = 0;
-                bool toLiczba2 = false;
-                while (!toLiczba2)
+                Console.WriteLine("Podaj liczbe na pozycje: " + (x + 1) + "/" + ile);
+                while (!toLiczba)
                 {
-                    Console.WriteLine("Podaj liczbe na pozycje " + x + ": ");
-                    toLiczba2 = Int32.TryParse(Console.ReadLine(), out liczba);
-                    if (!toLiczba2)
+                    toLiczba = int.TryParse(Console.ReadLine(), out liczba);
+                    if (!toLiczba)
                     {
-                        Console.WriteLine("Podaj liczbe w cyfrach. Liczba musi byc calkowita.");
+                        Console.WriteLine("Podaj liczbe ponownie");
                     }
-
                 }
-                numArr[x] = Convert.ToInt32(liczba);
+
+                arrLiczb[x] = liczba;
             }
-            Liczby liczby = new Liczby(numArr);
-            liczby.countStuff();
+
+            Console.WriteLine("Największa: " + arrLiczb.Max());
+            Console.WriteLine("Na pozycji: " + (arrLiczb.ToList().IndexOf(arrLiczb.Max()) + 1));
+
+            Console.WriteLine("Srednia: " + Liczby.Srednia(arrLiczb));
+            Liczby chuj = new Liczby();
+
             Console.ReadLine();
         }
     }
