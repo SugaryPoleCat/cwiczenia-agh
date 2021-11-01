@@ -46,6 +46,12 @@ namespace Domowe_2
                     }
                 }
             }
+            // try/catch mozna miec wiele catch.
+            // kazdy catch moze odpowiadac za inny exception
+            // czyli np, jak uzytwkonik wpisze tekst zamiast cyfry, inny error.
+            // wpiusze decimal na int, inny eror, itp.
+            // na koncu MOZNA ale nie MUSI sie, dac finally()
+            // finally zostanie wykonany niewazne czy byl exception czy nie.
             catch (ArithmeticException e)
             {
                 Console.WriteLine(e);
