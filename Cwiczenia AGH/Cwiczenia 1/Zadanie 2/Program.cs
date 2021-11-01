@@ -22,7 +22,7 @@ namespace Zadanie_2
             }
 
             int[] arrLiczb = new int[ile];
-
+            int max = 0, suma = 0, last = 0;
             for (int x = 0; x < arrLiczb.Length; x++)
             {
                 toLiczba = false;
@@ -38,14 +38,23 @@ namespace Zadanie_2
                 }
 
                 arrLiczb[x] = liczba;
+                suma += liczba;
+                if (liczba > last)
+                {
+                    last = liczba;
+                }
             }
 
+            max = last;
             Console.WriteLine("Największa: " + arrLiczb.Max());
             Console.WriteLine("Na pozycji: " + (arrLiczb.ToList().IndexOf(arrLiczb.Max()) + 1));
 
             Console.WriteLine("Srednia: " + Liczby.Srednia(arrLiczb));
 
-            Console.ReadLine();
+            Console.WriteLine("BEZ UZYCIA ARRAY");
+            Console.WriteLine($"Max: {max}\nSrednia: {(suma / ile).ToString("N2")}");
+
+            Console.ReadKey();
         }
     }
 }
