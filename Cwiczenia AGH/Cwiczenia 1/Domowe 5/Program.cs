@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Domowe_5
 {
@@ -6,7 +7,16 @@ namespace Domowe_5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Data kurwa urodzenia chuju");
+
+            DateTime data;
+            bool toData = false;
+            while (!toData)
+            {
+
+            }
+
+            Console.ReadKey();
         }
     }
 }
