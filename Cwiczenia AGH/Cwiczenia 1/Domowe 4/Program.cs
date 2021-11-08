@@ -9,19 +9,19 @@ namespace Domowe_4
             bool niePuste = false;
             string tekst = "";
 
-            Console.WriteLine("POdaj tekst");
-            while (!niePuste)
-            {
-                tekst = Console.ReadLine();
-                if (tekst == "")
-                {
-                    Console.WriteLine("Tekst nie moze byc pusty");
-                }
-                else
-                {
-                    niePuste = true;
-                }
-            }
+           //Console.WriteLine("POdaj tekst");
+           //while (!niePuste)
+           //{
+           //    tekst = Console.ReadLine();
+           //    if (tekst == "")
+           //    {
+           //        Console.WriteLine("Tekst nie moze byc pusty");
+           //    }
+           //    else
+           //    {
+           //        niePuste = true;
+           //    }
+           //}
 
             // kkkktttrrrrrrrrrr = k4t3r10;
             string testowy = "kkkktttrrrrrrrrrr";
