@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zadanie_1
 {
@@ -43,7 +39,7 @@ namespace Zadanie_1
         {
             Imie = imie;
             Nazwisko = nazwisko;
-            DateTime.TryParseExact(data_urodzenia, new[] {"yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy"}, null, DateTimeStyles.None, out dataUrodzenia);
+            DateTime.TryParseExact(data_urodzenia, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy" }, null, DateTimeStyles.None, out dataUrodzenia);
             Pesel = pesel;
             this.plec = plec;
         }
