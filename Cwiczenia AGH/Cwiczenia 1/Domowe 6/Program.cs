@@ -12,6 +12,13 @@ namespace Domowe_6
             double result = (data.Date - teraz.Date).TotalDays;
             Console.WriteLine("Pozosalo: " + result + " dni do konca roku.");
 
+
+            // anotehr method: 
+            DateTime lastDays = new DateTime(teraz.Year, 12, 31);
+            double OstatnieDniRoku = (lastDays.Date - teraz.Date).TotalDays;
+            Console.WriteLine("2 metoda\nPozostalo: " + OstatnieDniRoku + " dni do konca roku");
+
+
             Console.ReadKey();
         }
     }
