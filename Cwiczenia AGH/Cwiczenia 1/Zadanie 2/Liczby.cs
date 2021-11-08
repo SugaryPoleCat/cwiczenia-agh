@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zadanie_2
 {
@@ -24,7 +21,7 @@ namespace Zadanie_2
         static public decimal Srednia(int[] numArr)
         {
             decimal[] dec = new decimal[numArr.Length];
-            for(int x = 0; x < numArr.Length; x++)
+            for (int x = 0; x < numArr.Length; x++)
             {
                 dec[x] = Convert.ToDecimal(numArr[x]);
             }

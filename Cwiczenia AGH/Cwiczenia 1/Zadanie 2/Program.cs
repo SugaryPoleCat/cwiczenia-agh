@@ -49,12 +49,12 @@ namespace Zadanie_2
         static void Main(string[] args)
         {
             // Ile liczb uzywtkonik chce
-            int ile = 0; 
+            int ile = 0;
 
             // to zmieni sie jezeli uzytkownik wpisze liczbe. Inicjalnie: false.
             bool toLiczba = false;
             Console.WriteLine("Podaj ile liczb chcesz: ");
-            while (!toLiczba) 
+            while (!toLiczba)
             {
                 toLiczba = int.TryParse(Console.ReadLine(), out ile);   // proboj wkleic INPUT z CONSOLE jako int.
 

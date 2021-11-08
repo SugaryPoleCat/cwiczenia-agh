@@ -13,7 +13,7 @@ namespace Domowe_4
             while (!niePuste)
             {
                 tekst = Console.ReadLine();
-                if(tekst == "")
+                if (tekst == "")
                 {
                     Console.WriteLine("Tekst nie moze byc pusty");
                 }
@@ -29,13 +29,13 @@ namespace Domowe_4
 
             char[] charString = testowy.ToCharArray();
 
-            for(int x = 0; x < charString.Length; x++)
+            for (int x = 0; x < charString.Length; x++)
             {
                 countChar = 1;
-                for(int z = 0; z < charString.Length; z++)
+                for (int z = 0; z < charString.Length; z++)
                 {
                     // tak kurwa wiem c# ze to jest puste, to MA BYC puste.
-                    if(charString[x] == charString[z] && charString[x] != '')
+                    if (charString[x] == charString[z] && charString[x] != '')
                     {
                         countChar++;
                         charString[z] = '0';

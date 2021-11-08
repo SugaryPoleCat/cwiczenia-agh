@@ -17,14 +17,14 @@ namespace Domowe_2
                 {
                     Console.WriteLine("Sprobuj ponownie");
                 }
-            } 
+            }
 
-                uint ilosc3 = 0;
+            uint ilosc3 = 0;
             try
             {
                 uint rownanie = liczba % 3;
-            // nie wiem czy to o to chodzi.
-                if(rownanie == 0)
+                // nie wiem czy to o to chodzi.
+                if (rownanie == 0)
                 {
                     Console.WriteLine("Liczbe mozna dzielic przez 3.");
                 }
@@ -34,7 +34,7 @@ namespace Domowe_2
                 }
                 // chyba ze o to im chodzi?
                 string liczbaString = Convert.ToString(liczba);
-                for(int x = 0; x < liczbaString.Length; x++)
+                for (int x = 0; x < liczbaString.Length; x++)
                 {
                     Console.WriteLine($"pozycja {x}: {liczbaString[x]}");
                     // czemu to krwa double
@@ -60,13 +60,15 @@ namespace Domowe_2
             {
                 Console.WriteLine(e);
             }
-            if (ilosc3 < 1) {
+            if (ilosc3 < 1)
+            {
                 Console.WriteLine("nie, nie znaleziono 3 w liczbnie.");
-            } else
+            }
+            else
             {
                 Console.WriteLine($"Znaleziono {ilosc3} troijek.");
             }
-        Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
